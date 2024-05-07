@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <h1>local storage</h1>
+    <section id="store">
+
+    </section>
+    
+    <section id="local">
+
+    </section>
+    <section id="dob">
+
+    </section>
+    <script>
+        if(typeof Storage){
+            localStorage.setItem("firstname","dracula");
+            document.getElementById('store').innerHTML=localStorage.getItem("firstname"); 
+        }
+        if(typeof Storage){
+            localStorage.setItem("lastname","vampire");
+            document.getElementById('local').innerHTML=localStorage.getItem("lastname");
+        }
+        if(typeof Storage){
+            localStorage.setItem("DOB","12.12.0001");
+            document.getElementById('dob').innerHTML=localStorage.getItem("DOB");
+        }
+
+        else{
+            document.getElementById("store").innerHTML="no browser support";
+        }
+    </script>
+</body>
+</html>
